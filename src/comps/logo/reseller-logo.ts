@@ -10,7 +10,7 @@ import {Observable} from "rxjs/Observable";
     selector: 'reseller-logo',
     changeDetection: ChangeDetectionStrategy.OnPush,
     template: `
-        <img lazyImage style="width: 150px; height: 45px;"
+        <img lazyImage style="width: 177px; height: 63px;"
              [loadingImage]="'assets/login_logo.png'"
              [defaultImage]="'assets/login_logo.png'"
              [errorImage]="'assets/login_logo.png'"
