@@ -15,7 +15,7 @@ import {YellowPepperService} from "../services/yellowpepper.service";
                 <ng-menu-item i18n-title [fontawesome]="'fa-laptop'" name="Stations" title="Stations"></ng-menu-item>
                 <ng-menu-item i18n-title [fontawesome]="'fa-group'" name="Fasterq" title="Fasterq"></ng-menu-item>
                 <!--<ng-menu-item i18n-title [fontawesome]="'fa-cog'" name="Settings" title="'Settings'"></ng-menu-item>-->
-                <ng-menu-item i18n-title [fontawesome]="'fa-cloud-upload'" name="Studiopro" title="Studiopro"></ng-menu-item>
+                <ng-menu-item i18n-title [fontawesome]="'fa-cloud-upload'" name="Creation" title="Creation"></ng-menu-item>
                 <ng-menu-item i18n-title [fontawesome]="'fa-heart'" name="Help" title="Help"></ng-menu-item>
                 <ng-menu-item i18n-title *ngIf="isBrandingDisabled | async" [fontawesome]="'fa-rocket'" name="Install" title="Install"></ng-menu-item>
                 <ng-menu-item i18n-title [fontawesome]="'fa-power-off'" name="Logout" title="Logout"></ng-menu-item>

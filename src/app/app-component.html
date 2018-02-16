@@ -13,12 +13,6 @@
                 <Logo          class="pull-left" *ngIf="isBrandingDisabled" style="padding-left: 5px; padding-top: 5px"></Logo>
                 <reseller-logo class="pull-left" *ngIf="!isBrandingDisabled" style="padding-left: 5px; padding-top: 5px"></reseller-logo>
 
-                <span class="pull-left" style="padding-top: 4px; padding-left: 4px">
-                    <span style="font-size: 1.4em">{{productName}}</span>
-                    <!--<label [ngClass]="{offline: offlineDevMode}" style="padding-left: 20px; font-size: 10px; color: gray; font-family: Arial">version {{version}} | angular build {{ngVersion}} | {{offlineDevMode==true ? 'offline' : 'online'}}</label>-->
-                </span>
-                <div class="clearfix"></div>
-
             </span>
 
         </div>
@@ -33,7 +27,7 @@
                 <ng-menu-item [fontawesome]="'fa-heart'" i18n-title name="Help" title="Help"></ng-menu-item>
                 <ng-menu-item *ngIf="isBrandingDisabled" [fontawesome]="'fa-laptop'" i18n-title name="Install" title="Install"></ng-menu-item>
                 <!--<ng-menu-item [fontawesome]="'fa-cog'" name="Settings" title="'Settings'"></ng-menu-item>-->
-                <ng-menu-item [fontawesome]="'fa-cloud-upload'" i18n-title name="Studiopro" title="Studiopro"></ng-menu-item>
+                <ng-menu-item [fontawesome]="'fa-cloud-upload'" i18n-title name="Creation" title="Creation"></ng-menu-item>
                 <ng-menu-item [fontawesome]="'fa-power-off'" i18n-title name="Logout" title="Logout"></ng-menu-item>
             </ng-menu>
 
@@ -116,5 +110,3 @@
     </modal-body>
     <modal-footer [show-default-buttons]="false"></modal-footer>
 </modal>
-
-

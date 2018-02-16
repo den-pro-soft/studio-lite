@@ -18,10 +18,10 @@ import 'rxjs/add/operator/distinctUntilChanged';
         <div id="logoContainer" class="reshid flip">
             <div class="flipcard">
                 <div class="face front">
-                    <img class="img-responsive" src="assets/logo_s.png"/>
+                    <img class="img-responsive" src="assets/login_logo.png"/>
                 </div>
                 <div class="face back">
-                    <img class="img-responsive" src="assets/logo_b.png"/>
+                    <img class="img-responsive" src="assets/login_logo.png"/>
                 </div>
             </div>
         </div>

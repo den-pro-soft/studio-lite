@@ -10,10 +10,10 @@ import {Observable} from "rxjs/Observable";
     selector: 'reseller-logo',
     changeDetection: ChangeDetectionStrategy.OnPush,
     template: `
-        <img lazyImage style="width: 43px; height: 25px;"
-             [loadingImage]="'https://secure.digitalsignage.com/studioweb/assets/default_logo.png'"
-             [defaultImage]="'https://secure.digitalsignage.com/studioweb/assets/default_logo.png'"
-             [errorImage]="'https://secure.digitalsignage.com/studioweb/assets/default_logo.png'"
+        <img lazyImage style="width: 170px; height: 60px;"
+             [loadingImage]="'assets/login_logo.png'"
+             [defaultImage]="'assets/login_logo.png'"
+             [errorImage]="'assets/login_logo.png'"
              [retry]="3"
              [delay]="500"
              (loaded)="_onLoaded()"
@@ -27,6 +27,8 @@ export class ResellerLogo extends Compbaser implements AfterViewInit {
     constructor(private yp: YellowPepperService, private rp: RedPepperService) {
         super();
     }
+
+
 
     @ViewChild(LazyImage)
     lazyImage: LazyImage;
@@ -51,8 +53,8 @@ export class ResellerLogo extends Compbaser implements AfterViewInit {
                     if (i_userModel.resellerId == 1)
                         return;
                     var urls = [
-                        `http://galaxy.signage.me/Resources/Resellers/${i_userModel.resellerId}/Logo.png`,
-                        `http://galaxy.signage.me/Resources/Resellers/${i_userModel.resellerId}/Logo.jpg`
+                        `assets/login_logo.png`,
+                        `assets/login_logo.png`
                     ];
                     this.lazyImage.setUrls(urls);
                 }, (e) => console.error(e))

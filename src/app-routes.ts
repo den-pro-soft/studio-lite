@@ -31,7 +31,7 @@ const routes: Routes = [
             {path: 'Install', loadChildren: '../app/install/index#InstallLazyModule', data: {title: 'Install'}, canActivate: [AuthService]},
             {path: 'Settings', loadChildren: '../app/settings/index#SettingsLazyModule', data: {title: 'Settings'}, canActivate: [AuthService]},
             {path: 'Stations', loadChildren: '../app/stations/index#StationsLazyModule', data: {title: 'Stations'}, canActivate: [AuthService]},
-            {path: 'Studiopro', loadChildren: '../app/studiopro/index#StudioProLazyModule', data: {title: 'Studiopro'}, canActivate: [AuthService]},
+            {path: 'Creation', loadChildren: '../app/studiopro/index#StudioProLazyModule', data: {title: 'Creation'}, canActivate: [AuthService]},
             {path: 'Logout', component: Logout, data: {title: 'Logout'}, canActivate: [AuthService]},
             {path: '**', redirectTo: 'Dashboard'}
         ]
@@ -39,5 +39,3 @@ const routes: Routes = [
 ];
 
 export const routing = RouterModule.forRoot(routes, {enableTracing: false, preloadingStrategy: PreloadAllModules});
-
-

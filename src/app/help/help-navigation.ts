@@ -5,7 +5,11 @@ import {ModalComponent} from "ng2-bs3-modal/ng2-bs3-modal";
 import {MediaPlayer} from "../../comps/media-player/media-player";
 import {YellowPepperService} from "../../services/yellowpepper.service";
 import {Observable} from "rxjs/Observable";
-
+/*
+		<button class="videos btn btn-primary btn-lg" (click)="_onPlay('http://s3.signage.me/business1000/resources/FasterQv2.mp4')">
+				<span>FasterQue line management</span>
+		</button>
+*/
 @Component({
     changeDetection: ChangeDetectionStrategy.OnPush,
     styles: [`
@@ -14,6 +18,35 @@ import {Observable} from "rxjs/Observable";
             margin: 8px;
             width: 200px
         }
+
+				.go_video {
+						padding: 8px;
+						margin: 8px;
+				}
+
+				.go_video a {
+						width: 153px;
+						height: 67px;
+						background: url(assets/click_t.png) no-repeat;
+						background-size: 150px 65px;
+						display: inline-block;
+				}
+
+
+				.go_video a:active {
+						position: relative;
+						top: 2px;
+						-webkit-box-shadow: none !important;
+						-moz-box-shadow: none !important;
+						-ms-box-shadow: none !important;
+						-o-box-shadow: none !important;
+						box-shadow: none !important;
+						-webkit-transition: All 250ms ease;
+						-moz-transition: All 250ms ease;
+						-o-transition: All 250ms ease;
+						-ms-transition: All 250ms ease;
+						transition: All 250ms ease;
+				}
     `],
     host: {
         '[@routeAnimation]': 'true',
@@ -33,34 +66,14 @@ import {Observable} from "rxjs/Observable";
         <div id="helpPanel">
             <!-- video tutorials -->
             <h3 data-localize="videoTutorial">Video tutorial</h3>
-            <button class="videos btn btn-primary btn-lg" (click)="_onPlay('http://s3.signage.me/business1000/resources/StudioLite.mp4')">
-                <span data-localize="basicIntroductionVideo">basic introduction</span>
-            </button>
-            <button class="videos btn btn-primary btn-lg" (click)="_onPlay('http://s3.signage.me/business1000/resources/SceneComponentsLite.mp4')">
-                <span data-localize="sceneAndComponents">Scenes and components</span>
-            </button>
-            <button class="videos btn btn-primary btn-lg" (click)="_onPlay('http://s3.signage.me/business1000/resources/StudioLiteAdv.mp4')">
-                <span data-localize="advancedConfigurationVideo">advanced configuration</span>
-            </button>
-            <button class="videos btn btn-primary btn-lg" (click)="_onPlay('http://s3.signage.me/business1000/resources/LiteSeqVsSched.mp4')">
-                <span data-localize="seqVsSchedVideo2">sequencer vs scheduler</span>
-            </button>
-            <button class="videos btn btn-primary btn-lg" (click)="_onPlay('http://s3.signage.me/business1000/resources/LiteCollection.mp4')">
-                <span data-localize="collectionComponent">collection component</span>
-            </button>
-            <button class="videos btn btn-primary btn-lg" (click)="_onPlay('http://s3.signage.me/business1000/resources/LocationBased.mp4')">
-                <span data-localize="locationBasedComponent">location based component</span>
-            </button>
-            <button class="videos btn btn-primary btn-lg" (click)="_onPlay('http://s3.signage.me/business1000/resources/LiteGoogleCalendar.mp4')">
-                <span data-localize="googleCalendarComponent">Google Calendar</span>
-            </button>
-            <button class="videos btn btn-primary btn-lg" (click)="_onPlay('http://s3.signage.me/business1000/resources/FasterQv2.mp4')">
-                <span>FasterQue line management</span>
-            </button>
+
+						<div class = "go_video">
+								<a href = "#" (click)="_onGoLink($event)" >
+								</a>
+						</div>
             <hr/>
             <div>
                 <div class="reshid">
-                    <h3 i18n> links</h3>
                     <div *ngIf="isBrandingDisabled | async">
                         <li>
                             <a class="helpLinks" target="_blank" href="http://lite.digitalsignage.com" data-localize="studioLitePage">StudioLite page</a>
@@ -81,9 +94,6 @@ import {Observable} from "rxjs/Observable";
                             <a class="helpLinks" target="_blank" href="http://www.digitalsignage.com/support/upload/index.php?/Knowledgebase/List" data-localize="knowledgeBase">Knowledge base</a>
                         </li>
                     </div>
-                    <li>
-                        <a class="helpLinks" target="_blank" href="http://www.signage.me/files/FQ_PrinterSetup.pdf">Setting up FasterQ printer</a>
-                    </li>
                 </div>
                 <hr/>
                 <div *ngIf="isBrandingDisabled | async" class="reshid">
@@ -94,10 +104,6 @@ import {Observable} from "rxjs/Observable";
             <div class="clearFloat"></div>
             <hr/>
             <div class="pull-left">
-                <h5 i18n>Powered by Google's Angular framework</h5>
-                <a class="helpLinks" target="_blank" href="https://angular.io/">
-                    <img src="./assets/angular.png"/>
-                </a>
             </div>
 
         </div>
@@ -131,6 +137,10 @@ export class HelpNavigation extends Compbaser {
     _onClose() {
         this.m_playing = false;
     }
+
+		_onGoLink(event) {
+				window.open('https://www.youtube.com/', '_blank');
+		}
 
     _onPlay(i_path) {
         this.m_playResource = i_path;

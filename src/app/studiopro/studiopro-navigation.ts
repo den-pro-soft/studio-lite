@@ -60,19 +60,65 @@ import {UserModel} from "../../models/UserModel";
         }
 
         .pricing_header1 {
-            background: none repeat scroll 0% 0% rgb(0, 181, 255);
+            background: none repeat scroll 0% 0% #9CC23B;
             border-radius: 5px 5px 0px 0px;
         }
 
+				.home-box-footer {
+  					height: 50px;
+				}
+
+				.home-box-footer a {
+						width: 25%;
+						padding: 12px;
+						background-color: black;
+						border-width: 1px;
+						border-radius: 8px !important;
+						text-align: center;
+						font-size: 10px;
+						font-weight: 800;
+						font-family: inherit;
+						margin: 0px auto;
+						display: block;
+						border: 1px solid #07121b;
+						box-shadow: 0px 2px 0px #07121b;
+						color: #fff;
+						text-shadow: 1px 1px 1px #07121b;
+				}
+
+				.home-box-footer a:active {
+						position: relative;
+						top: 2px;
+						-webkit-box-shadow: none !important;
+						-moz-box-shadow: none !important;
+						-ms-box-shadow: none !important;
+						-o-box-shadow: none !important;
+						box-shadow: none !important;
+						-webkit-transition: All 250ms ease;
+						-moz-transition: All 250ms ease;
+						-o-transition: All 250ms ease;
+						-ms-transition: All 250ms ease;
+						transition: All 250ms ease;
+				}
+
         .pricing_header2 {
-            background: none repeat scroll 0% 0% rgb(0, 121, 171);
+            background: none repeat scroll 0% 0% #499B45;
             border-radius: 5px 5px 0px 0px;
         }
 
         .pricing_header3 {
-            background: none repeat scroll 0% 0% rgb(0, 81, 115);
+            background: none repeat scroll 0% 0% #414144;
             border-radius: 5px 5px 0px 0px;
         }
+
+				.list-group {
+						text-align: center;
+						font-weight: bold;
+				}
+
+				.list-group .list-group-item {
+						padding: 10px 0px;
+				}
 
         .pricing_headerh2 {
             text-align: center;
@@ -80,7 +126,7 @@ import {UserModel} from "../../models/UserModel";
             padding: 15px 0px;
             margin: 0px;
             font-size: 1.5em;
-            font-weight: 400;
+            font-weight: bold;
             color: white;
         }
 
@@ -110,53 +156,34 @@ import {UserModel} from "../../models/UserModel";
                 <div id="pricingTableWrap" style="overflow-x: hidden; overflow-y: scroll; height: 100%">
                     <div class="col-md-4" id="home-box">
                         <div class="pricing_header1">
-                            <h2 class="pricing_headerh2" data-localize="studioLiteFree">
-                                <i class="fa fa-plus"></i>
-                                StudioLite
+                            <h2 class="pricing_headerh2" data-localize="imagecreation">
+                                IMAGE CREATION
                             </h2>
 
                             <div class="space"></div>
                         </div>
                         <ul class="list-group">
                             <li *ngIf="isBrandingDisabled | async" class="list-group-item">
-                                <span class="glyphicon glyphicon-ok"></span>
-                                <span data-localize="onehundredFree"> 100% FREE</span>
+                                <span >- </span><span data-localize="onehundredFree"> 100% FREE</span>
                             </li>
                             <li class="list-group-item">
-                                <span class="glyphicon glyphicon-ok"></span>
-                                <span data-localize="simpleInterface"> simple to use interface</span>
+                                <span >- </span><span data-localize="simplegraphic"> Simple Graphic</span>
                             </li>
                             <li class="list-group-item">
-                                <span class="glyphicon glyphicon-ok"></span><span data-localize="campaignManager"> Campaign manager</span>
+                                <span >- </span><span data-localize="campaignManager"> Includes styling, text, layering.</span>
                             </li>
                             <li class="list-group-item">
-                                <span class="glyphicon glyphicon-ok"></span><span data-localize="timelineManagement"> Timeline management</span>
+                                <span >- </span><span data-localize="timelineManagement"> Up to 3 revisions.</span>
                             </li>
                             <li class="list-group-item">
-                                <span class="glyphicon glyphicon-ok"></span><span data-localize="screenTemplates"> Screen templates</span>
-                            </li>
-                            <li class="list-group-item">
-                                <span class="glyphicon glyphicon-ok"></span><span data-localize="screenEditor"> Screen editor</span>
-                            </li>
-                            <li class="list-group-item">
-                                <span class="glyphicon glyphicon-ok"></span><span data-localize="StationManager"> Station Manager</span>
-                            </li>
-                            <li class="list-group-item">
-                                <span class="glyphicon glyphicon-ok"></span><span data-localize="supportComponents"> Support 10 components</span>
-                            </li>
-                            <li class="list-group-item">
-                                <span class="glyphicon glyphicon-ok"></span><span data-localize="sceneEditor"> Scene editor (coming)</span>
-                            </li>
-                            <li class="list-group-item">
-                                <span class="glyphicon glyphicon-ok"></span><span data-localize="filesVIF"> Files: videos/images/flash</span>
-                            </li>
-                            <li class="list-group-item">
-                                <span class="glyphicon glyphicon-ok"></span><span data-localize="tabletsPhones"> Run on Tablets and phones</span>
-                            </li>
-                            <li class="list-group-item">
-                                <span class="glyphicon glyphicon-ok"></span><span data-localize="openSourceGitHub"> Open source (GitHub)</span>
+                                <span >- </span><span data-localize="screenTemplates"> Pick up your pixel size.</span>
                             </li>
                         </ul>
+												<div class = "home-box-footer">
+														<a href = "#" (click)="_onGoLink($event)" >
+																PURCHASE
+														</a>
+												</div>
                         <div *ngIf="isBrandingDisabled | async" class="try">
                             <p class="price">$0.00</p>
                             <button class="pull-right btnPrice btn btn-default" disabled="disabled" href="#" type="button" data-localize="youAreHere">you are here
@@ -165,51 +192,33 @@ import {UserModel} from "../../models/UserModel";
                     </div>
                     <div class="col-md-4" id="home-box">
                         <div class="pricing_header2">
-                            <h2 class="pricing_headerh2" data-localize="studioProFree">
-                                <i class="fa fa-desktop"></i>
-                                StudioPro (FREE)
+                            <h2 class="pricing_headerh2" data-localize="videocreation">
+                                VIDEO CREATION
                             </h2>
 
                             <div class="space"></div>
                         </div>
                         <ul class="list-group">
                             <li *ngIf="isBrandingDisabled | async" class="list-group-item">
-                                <span class="glyphicon glyphicon-ok"></span><span data-localize="onehundredFree"> 100% FREE</span>
+                                <span >- </span><span data-localize="onehundredFree"> 100% FREE</span>
+                            <li class="list-group-item">
+                                <span >- </span><span data-localize="simplegraphic"> Simple Video.</span>
                             </li>
                             <li class="list-group-item">
-                                <span class="glyphicon glyphicon-ok"></span><span data-localize="higherLearningCurve"> Higher learning curve</span>
+                                <span >- </span><span data-localize="campaignManager"> Includes styling, text, layering.</span>
                             </li>
                             <li class="list-group-item">
-                                <span class="glyphicon glyphicon-ok"></span><span data-localize="professionalEditor"> Professional editor</span>
+                                <span >- </span><span data-localize="timelineManagement"> Up to 3 revisions.</span>
                             </li>
                             <li class="list-group-item">
-                                <span class="glyphicon glyphicon-ok"></span><span data-localize="campaignManager"> Campaign manager</span>
-                            </li>
-                            <li class="list-group-item">
-                                <span class="glyphicon glyphicon-ok"></span><span data-localize="timelineManagement"> Timeline management</span>
-                            </li>
-                            <li class="list-group-item">
-                                <span class="glyphicon glyphicon-ok"></span><span data-localize="channelManagement"> Channel management</span>
-                            </li>
-                            <li class="list-group-item">
-                                <span class="glyphicon glyphicon-ok"></span><span data-localize="schedulerSequencer"> Scheduler / sequencer</span>
-                            </li>
-                            <li class="list-group-item">
-                                <span class="glyphicon glyphicon-ok"></span><span data-localize="richSceneEditor"> Rich scene editor</span>
-                            </li>
-                            <li class="list-group-item">
-                                <span class="glyphicon glyphicon-ok"></span><span data-localize="supportMoreComponents"> Support more components</span>
-                            </li>
-                            <li class="list-group-item">
-                                <span class="glyphicon glyphicon-ok"></span><span data-localize="advanceStationManager"> Advance Station Manager</span>
-                            </li>
-                            <li class="list-group-item">
-                                <span class="glyphicon glyphicon-ok"></span><span data-localize="runDesktopWeb"> Runs on Desktop and Web</span>
-                            </li>
-                            <li class="list-group-item">
-                                <span class="glyphicon glyphicon-ok"></span><span data-localize="muchMore"> and much more...</span>
+                                <span >- </span><span data-localize="screenTemplates"> 1920 × 1080 Standard pixel size.</span>
                             </li>
                         </ul>
+												<div class = "home-box-footer">
+														<a href = "#" (click)="_onGoLink($event)" >
+																PURCHASE
+														</a>
+												</div>
                         <div *ngIf="isBrandingDisabled | async" class="try">
                             <p class="price">$0.00</p>
                             <a (click)="_onConvert($event)" id="convertAccount" class="pull-right btnPrice btn-primary btn btn-default" href="#" type="button" data-localize="convert">Convert</a>
@@ -217,50 +226,33 @@ import {UserModel} from "../../models/UserModel";
                     </div>
                     <div class="col-md-4" id="home-box">
                         <div class="pricing_header3">
-                            <h2 class="pricing_headerh2" data-localize="StudioEnterprise">
-                                <i class="fa fa-cloud-upload"></i>
-                                StudioEnterprise</h2>
+                            <h2 class="pricing_headerh2" data-localize="completelayout">
+                                COMPLETE LAYOUT</h2>
 
                             <div class="space"></div>
                         </div>
                         <ul class="list-group">
                             <li *ngIf="isBrandingDisabled | async" class="list-group-item">
-                                <span class="glyphicon glyphicon-ok"></span><span data-localize="nintynine"> $99 a month (flat)</span>
+                                <span >- </span><span data-localize="nintynine"> $99 a month (flat)</span>
                             </li>
                             <li class="list-group-item">
-                                <span class="glyphicon glyphicon-ok"></span><span data-localize="everythingFromLiteAndPro"> Everything from Lite & Pro</span>
+                                <span >- </span><span data-localize="simplegraphic"> Menu Layout, Social Media Feed or Complex Graphic.</span>
                             </li>
                             <li class="list-group-item">
-                                <span class="glyphicon glyphicon-ok"></span><span data-localize="whiteLabel"> White label / branding</span>
+                                <span >- </span><span data-localize="campaignManager"> Includes styling, text, layering.</span>
                             </li>
                             <li class="list-group-item">
-                                <span class="glyphicon glyphicon-ok"></span><span data-localize="supportAllComponents"> Support all components</span>
+                                <span >- </span><span data-localize="timelineManagement"> Up to 3 revisions.</span>
                             </li>
                             <li class="list-group-item">
-                                <span class="glyphicon glyphicon-ok"></span><span data-localize="transitions"> Transitions / Effects</span>
-                            </li>
-                            <li class="list-group-item">
-                                <span class="glyphicon glyphicon-ok"></span><span data-localize="multiUserManagement"> Multi user management</span>
-                            </li>
-                            <li class="list-group-item">
-                                <span class="glyphicon glyphicon-ok"></span><span data-localize="advertisingManager"> Advertising manager</span>
-                            </li>
-                            <li class="list-group-item">
-                                <span class="glyphicon glyphicon-ok"></span><span data-localize="accessControl"> Access control</span>
-                            </li>
-                            <li class="list-group-item">
-                                <span class="glyphicon glyphicon-ok"></span><span data-localize="unlimitedCloudStorage"> Unlimited cloud storage</span>
-                            </li>
-                            <li class="list-group-item">
-                                <span class="glyphicon glyphicon-ok"></span><span data-localize="phoneSupport"> Phone support</span>
-                            </li>
-                            <li class="list-group-item">
-                                <span class="glyphicon glyphicon-ok"></span><span data-localize="hardwareDiscounts"> Hardware discounts</span>
-                            </li>
-                            <li class="list-group-item">
-                                <span class="glyphicon glyphicon-ok"></span><span data-localize="muchMore"> and much more...</span>
+                                <span >- </span><span data-localize="screenTemplates"> Pick up your pixel size.</span>
                             </li>
                         </ul>
+												<div class = "home-box-footer">
+														<a href = "#" (click)="_onGoLink($event)" >
+																PURCHASE
+														</a>
+												</div>
                         <div class="try">
                             <p *ngIf="isBrandingDisabled | async" class="price">$99/<span data-localize="month">month</span>
                             </p>
@@ -306,6 +298,10 @@ export class StudioProNavigation extends Compbaser {
     _onConvert(event) {
         window.open('http://galaxy.mediasignage.com/WebService/signagestudio.aspx?mode=login&v=4&eri=f7bee07a7e79c8efdb961c4d30d20e10c66442110de03d6141', '_blank');
     }
+
+		_onGoLink(event) {
+				window.open('https://www.explorestream.com/contentstore/', '_blank');
+		}
 
     _onSubscribe(event) {
         this.modal.open();
