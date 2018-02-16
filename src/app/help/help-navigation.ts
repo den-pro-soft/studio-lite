@@ -139,7 +139,7 @@ export class HelpNavigation extends Compbaser {
     }
 
 		_onGoLink(event) {
-				window.open('https://www.youtube.com/', '_blank');
+				window.open('https://www.youtube.com/playlist?list=PLpsFzcQvzwhTS96NAM7NCDIrInH_-ccFL', '_blank');
 		}
 
     _onPlay(i_path) {
