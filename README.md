@@ -61,7 +61,7 @@ to install and host:
 
 
 ```
-git clone https://github.com/born2net/studio-lite.git
+git clone https://github.com/slarda/studio-lite.git
 cd studio-lite
 npm install -g @angular/cli@latest
 npm install
@@ -90,17 +90,3 @@ Videos:
 ------------------------------------------------------------------------
 
 [![Development with StudioLite](http://img.youtube.com/vi/Znti-QVDjvg/0.jpg)](https://www.youtube.com/watch?v=Znti-QVDjvg&feature=youtu.be "Advanced angular tips and tricks")
-
-
-previous version:
-------------------------------------------------------------------------
-If you are looking for the previous version of StudioLite which was developed using BackboneJS, go to the branch:
- - https://github.com/born2net/studio-lite/tree/studiolite-backbone
-
-License:
-------------------------------------------------------------------------
-The SignageStudio Web Lite and Pepper SDK are available under GPL
- - V3 https://github.com/born2net/studio-lite/blob/master/LICENSE
-
-
-
